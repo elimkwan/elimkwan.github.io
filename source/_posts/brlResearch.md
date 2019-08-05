@@ -2,12 +2,11 @@
 title: Research at Bristol Robotic Lab
 date: 2019-08-05 01:33:40
 tags:
-cover_index: /images/brl1.jpg
+cover_index: "https://www.dropbox.com/s/el4e7cls89hj3ut/thumb-brl.jpg?raw=1"
 ---
 <p>This summer, I am also spending six weeks at Bristol Robotics Labratories and working with the <a href="https://www.bristolroboticslab.com/tactile-robotics" target="_blank" rel="noopener">Tactile Robotics Group</a> </p>
 
-
-<img src="/images/brl1.jpg" alt="will display when deployed">
+<img src="https://www.dropbox.com/s/el4e7cls89hj3ut/thumb-brl.jpg?raw=1" alt="">
 
 
 <p>Developing engineering solutions for integrating soft robot to robotic hands which involves:</p>

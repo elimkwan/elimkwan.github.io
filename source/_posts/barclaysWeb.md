@@ -2,6 +2,7 @@
 title: Web development at Barclays
 date: 2019-08-05 01:33:57
 tags:
+cover_index: "https://www.dropbox.com/s/wm4bw9axqi6s7ji/thumb-barclaysWeb.jpg?raw=1"
 ---
 <p>This summer, I joined Barclays as technology summer intern. It was a challenging, yet rewarding experience.</p>
 <br>
