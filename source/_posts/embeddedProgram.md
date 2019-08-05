@@ -9,4 +9,4 @@ coming soon ~
 <br>
 <br>
 <h3>Key Skills developed:<h3>
-<button>#Embedded Programming</button>  <button>#Low level programming</button>  <button>#TI-RSLK Kit Set</button>  
+<button>#Embedded Programming</button>  <button>#Low level programming</button>  <button>#TI-RSLK Kit Set</button>  <button>#Team</button> 
