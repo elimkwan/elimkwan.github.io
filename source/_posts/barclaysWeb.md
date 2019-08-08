@@ -7,7 +7,7 @@ cover_index: "https://www.dropbox.com/s/wm4bw9axqi6s7ji/thumb-barclaysWeb.jpg?ra
 <p>This summer, I joined Barclays as technology summer intern. It was a challenging, yet rewarding experience.</p>
 <br>
 <h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Planning Poker </h1>
-JIRA and different planning tools has gained increasing popularity and are particularly useful for managing big and complicated projects. Therefore, our team is developing a <a href="https://www.mountaingoatsoftware.com/agile/planning-poker" target="_blank" rel="noopener"> Planning Poker tool.</a>  It is an agile estimating and planning technique that help teams to estimate their product backlogs.
+JIRA and different planning tools has gained increasing popularity and are particularly useful for managing big and complicated projects. Therefore, we, as a group of interns, are developing an agile estimating tool from scatch for internal clients.
 
 <p>Stacks used: </p>
 <li>Angular for front end</li>
