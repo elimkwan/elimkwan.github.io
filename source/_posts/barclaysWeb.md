@@ -6,14 +6,15 @@ cover_index: "https://www.dropbox.com/s/wm4bw9axqi6s7ji/thumb-barclaysWeb.jpg?ra
 ---
 <p>This summer, I have joined Barclays as Technical Developer Summer Analyst. It was a challenging, yet rewarding experience.</p>
 <br>
-<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> As a Developer in Barclays </h1>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> As a Developer in Barclays ...</h1>
 JIRA and different planning tools has gained increasing popularity and are particularly useful for managing big and complicated projects. Therefore, we, as a group of interns, are developing an agile estimating tool from scatch for our internal clients.
-
-<p>Stacks used: </p>
+<br>
+<br>
+Stacks used: 
 <li>Angular for front end</li>
 <li>Golang for backend</li>
-<li>Deployed on Amazon Fargate</li>
-
+<li>Deployed on Amazon EC2 Instance and Fargate</li>
+<br>
 <p>I started off with front end development, building up features and styling pages with Angular Material Modules. I then moved on to work on integration with the back end, sending HTTP requests to store and retrieve information from the server. After that, I also tried out Golang and worked on the user management system at the backend server. </p>
 <p>Entering phase two of the project, we started to deploy it with Amazon AWS EC2 instances and Fargate. With deployment on the fly, we had a hard time catching up with front-end testing. Lesson of the day is we should not leave unit tests till the last minute. In addition, we also started to have proper JIRA and sprint planning session, using the very own tool that we developed for planning our project. This hugely improved our efficiency and is a rewarding moment for the team because we are using the product that we developed.  I have also gained more understanding on Barclays DevOps procedures and processes. </p>
 <br>
@@ -27,7 +28,7 @@ To name but just a few:
 <li>e) Crytography</li>
 <li>f) Ventures</li>
 
-<p>I also have the chance to met various directors and managing directors to understand more about their views on future tech, business and their roles, which are quite insightful and inspiring.</p>
+<p>In addition, I have also scheduled meetings with various directors and managing directors to understand more about their views on future tech, business and their roles, which are quite insightful and inspiring. Overall, I have met so many amazing people via this intership and it enriched my skillsets, offered me an intriguing insight into the daily work of a developer at Barclays. Surely, it is a summer well spent. </p>
 <br>
 <br>
 <br>
