@@ -3,6 +3,8 @@ title: Skills
 date: 2019-08-05 01:23:33
 ---
 <h3>Software</h3>
+<button><a href= "/2019/08/05/cube">#Computer Vision</a></button>
+<button><a href= "/2019/08/05/brlResearch">#Machine Learning</a></button>
 <button><a href= "/2019/08/05/barclaysWeb">#Web Development</a></button>
 <button><a href= "/2019/08/05/barclaysWeb">#FrontEnd</a></button>  
 <button><a href= "/2019/08/05/barclaysWeb">#BackEnd</a></button>  
@@ -35,18 +37,24 @@ date: 2019-08-05 01:23:33
 <button>#Cadence</button>
 <button><a href= "/2019/08/05/cube">#Eagle</a></button>
 <button><a href= "/2019/08/05/kazooPcb">#Arduino</a></button>
-<button><a href= "/2019/08/05/robotWar">#3D Modelling</a></button>
-<button><a href= "/2019/08/05/robotWar">#3D Printing</a></button>
+<button><a href= "/2019/08/05/brlResearch">#3D Modelling</a></button>
+<button><a href= "/2019/08/05/brlResearch">#3D Printing</a></button>
 <button><a href= "/2019/08/05/kazooPcb">#CNC Machine</a></button>
 <button><a href= "/2019/08/05/kazooPcb">#Laser Cutting Machine</a></button>
-<button><a href= "/2019/08/05/kazooPcb">#soldering</a></button>
+<button><a href= "/2019/08/05/cube">#soldering</a></button>
 <button><a href= "/2019/08/05/kazooPcb">#AutoCad</a></button>
 <button><a href= "/2019/08/05/embeddedProgram">#FPGA</a></button>
 <button><a href= "/2019/08/05/embeddedProgram">#Embedded Programming</a></button>
+<button><a href= "/2019/08/05/vhdlPeak">#VHDL</a></button>
+<button><a href= "/2019/08/05/cube">#Embedded Circuits</a></button>
+<button><a href= "/2019/08/05/brlResearch">#Sensors</a></button>
+<button><a href= "/2019/08/05/brlResearch">#R&D</a></button>
+<button><a href= "/2019/08/05/brlResearch">#Robotics</a></button>
 
 <br>
 <br>
-<h3>Graphic Design</h3>
+<h3>Design</h3>
+<button><a href= "/2019/08/05/brlResearch">#Fusion360</a></button>
 <button>#Photoshop</button>
 <button>#Final Cut Pro</button>
 

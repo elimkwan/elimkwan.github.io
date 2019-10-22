@@ -57,4 +57,10 @@ Random seed averaging approach means when pixels are picked from each tiles to c
 <button>#Hardware Prototype</button>  <button>#Sequential Circuit</button>
 <br>
 <br>
+<button>#Embedded Circuits</button>  <button>#Soldering</button>
+<br>
+<br>
+<button>#Image Processing</button>  <button>#Computer Vision</button>
+<br>
+<br>
 <button>#Software</button>  <button>#Python</button>  <button>#Teamwork</button>

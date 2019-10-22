@@ -1,9 +1,10 @@
 ---
-title: Embedded Programming with TI-RSLK Kit Set
-date: 2019-08-05 01:30:30
+title: AHB Bridge
+date: 2019-08-05 01:30:29
 tags:
-cover_index: "https://www.dropbox.com/s/4wzg3ngro38if0e/thumb-TI-RSLK.jpg?raw=1"
+cover_index: "https://www.dropbox.com/s/hoavhfz279ekyd0/thumb-vhdl.jpg?raw=1"
 ---
+
 <p>
 The aim of the project is to replace the Leon3 open source soft processor with ARM's
 Cortex M0 processor. Since Leon3 processor uses AHB interface and Cortex M0 uses
