@@ -14,4 +14,7 @@ The project familiarised me with real time data processing, concurrent programmi
 
 
 <h3>Key Skills developed:<h3>
-<button>#VHDL</button>  <button>#FPGA</button>  <button>#Team</button>  <button>#Time Management</button>
+<button>#VHDL</button>  <button>Concurrent Programming</button> <button>#FPGA</button>  
+<br>
+<br>
+<button>#Team</button>  <button>#Time Management</button>

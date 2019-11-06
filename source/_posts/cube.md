@@ -50,6 +50,8 @@ Colour recognision is one of the main blockers of the project. The slightest cha
 
 Random seed averaging approach means when pixels are picked from each tiles to calculated RGB average, instead of hard-coded the locations the pixels, pixels are picked randomly with in the tiles. This hugely improved the accuracy of the code. Also, with random seed approach, each run could potentially yield different results, thus, we can retry multiple times until we had successfully detected a valid scrambled cube configuarion.
 
+Full code can be found on <em><a href="https://github.com/elimkwan/Python-RubiksCubeColourRecognition" target="_blank" rel="noopener">GITHUB
+
 <br>
 <br>
 <br>
