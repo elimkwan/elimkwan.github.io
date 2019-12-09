@@ -123,6 +123,9 @@
 
 <!-- Content -->
 <p>It was one of my projects in first year. The program translates compiled files written in machine code and decompiles them into a ZX256 assembly representation. The project allowed me to gain a better understanding on fundamental programming concepts.</p>
+<p>For instance, below is command for decompliing hello.out file into assembly code, and the output are printed out as follows.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$./asmdump.exe tests/hello.out</span><br><span class="line">        db <span class="string">"Hello world!\n"</span></span><br><span class="line">main:   mov %a,<span class="number">0x04</span></span><br><span class="line">        mov %b,<span class="number">0x01</span></span><br><span class="line">        mov %c,<span class="number">0x00</span></span><br><span class="line">        mov %d,<span class="number">0x0d</span></span><br><span class="line">        syscall</span><br><span class="line">        mov %a,<span class="number">0x01</span></span><br><span class="line">        syscall</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p><em><a href="https://github.com/elimkwan/C_Decompiler-Interpreter" target="_blank" rel="noopener">#GITHUB REPO<br></a></em></p>
 <br>
 <br>
