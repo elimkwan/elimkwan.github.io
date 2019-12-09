@@ -2,6 +2,7 @@
 title: PCB Prototype at Kazoo
 date: 2019-08-05 01:30:09
 tags:
+cover_index: "https://www.dropbox.com/s/snm9dbmcg4n0odu/thumb-kazoo.jpg?raw=1"
 ---
 
 I worked at <a href="https://kazootechnology.com/">Kazoo Technology</a> last summer. It is a hardware startup that develop alternative solutions to Near-Field Technology.
