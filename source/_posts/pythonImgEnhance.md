@@ -2,7 +2,7 @@
 title: Building PS-like Filters (and more) with Python
 date: 2020-11-01 20:56:17
 tags:
-cover_index: https://www.dropbox.com/s/zhikwnbx2t4wg77/thumb-python-imgenh.jpg?raw=1
+cover_index: "https://www.dropbox.com/s/zhikwnbx2t4wg77/thumb-python-imgenh.jpg?raw=1"
 ---
 
 This post documented how we recreate Photoshop-like filter from scratch with Python. Including fundamental concepts from image processing: Histogram Equalisation, Laplcian Pyramid Blending, Possion Blending etc. (As the work is still under evaluation in university, code has not been published yet~)
