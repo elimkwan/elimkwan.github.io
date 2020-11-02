@@ -79,7 +79,7 @@ theme: Phantom
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/elimkwan/elimkwan.github.io.git
+  repo: git@github.com:elimkwan/elimkwan.github.io.git
   branch: master
 
 # hexo-hide-posts
