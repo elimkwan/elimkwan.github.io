@@ -80,7 +80,7 @@ theme: Phantom
 deploy:
   type: git
   repo: git@github.com:elimkwan/elimkwan.github.io.git
-  branch: master
+  branch: gh-pages
 
 # hexo-hide-posts
 hide_posts:
