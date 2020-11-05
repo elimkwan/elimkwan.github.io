@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="This project shows how we can apply spectra analysis technicals to create a digital filter that filter away the unwanted frequency in audio.
+
+Input Au">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Elim Kwan">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Separate noise from audio with linear filter">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Elim Kwan">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>Separate noise from audio with linear filter - Elim Kwan</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">Elim Kwan</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/skills">Skills</a>
+            </li>
+        
+            <li>
+                <a href="/experiences">Experiences</a>
+            </li>
+        
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>Separate noise from audio with linear filter</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>This project shows how we can apply spectra analysis technicals to create a digital filter that filter away the unwanted frequency in audio.</p>
+<br>
+Input Audio
+<br>
+<iframe frameborder="0" width="400" height="50" src="https://drive.google.com/file/d/1CZGguEngjqUYdCFbc_o3nXHMx_O8c5ks/preview">    
+</iframe>
+
+<br>
+Output Audio
+<br>
+<iframe frameborder="0" width="400" height="50" src="https://drive.google.com/file/d/1cJlmOxJzSeSXmcnTQ6WG1yZFz0o2Oy_M/preview">    
+</iframe>
+<br>
+<br>
+<br>
+<br>
+
+<p>By plotting the frequency spectrum of the input signal, we can identify that the noise lies at 835Hz, 1530Hz.<br><img src="https://www.dropbox.com/s/wath67u2gqixnfv/fft-input-spec.jpg?raw=1" width="1080" height="500"></p>
+<p>Since sampling frequency is 44100Hz and normalised frequency is calculated by 2* pi * frequency/ sampling frequency, the noise component lie at angular frquency 0.11(835Hz), 0.22(1530Hz). Poles and zeros should be placed at amplitude*e^(angular frequency) on the Pole Zero diagram as shown below. Amplitude of Zeros should be larger than pole in order to attenuate the signal.<br><img src="https://www.dropbox.com/s/i5rq6xxbehbvi8y/fft-poles.jpg?raw=1" width="600" height="500"></p>
+<p>The filter will then behave as follows. Normalised frquency is calculated by frequency/ sampling frequency. Therefore, we saw a dip in amplitude at normalised frequency 0.01(835Hz) and 0.03(1530Hz) in the filter amplitude response graph.<br><img src="https://www.dropbox.com/s/hse25nsddx068e1/fft-filter-response.jpg?raw=1" width="1080" height="400"></p>
+<p>Upon applying the filter to the input signal, we can compare the difference between the input and output frequency spectrum. Noise component (835Hz, 1530Hz) no longer exist in the frequency spectrum of the output signal!<br><img src="https://www.dropbox.com/s/x031nbs6cwjvmk3/fft-output-spectrum.jpg?raw=1" width="1080" height="500"></p>
+<p>The detailed code is as follows:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">[xn fs]=audioread(<span class="string">'input.wav'</span>);</span><br><span class="line">                   </span><br><span class="line">T = <span class="number">1</span>/fs;             <span class="comment">% Sampling period       </span></span><br><span class="line">L = <span class="built_in">length</span>(xn);       <span class="comment">% Length of signal</span></span><br><span class="line">t = (<span class="number">0</span>:L<span class="number">-1</span>)*T;        <span class="comment">% Time vector</span></span><br><span class="line"></span><br><span class="line">Li = L </span><br><span class="line">t1 = t(<span class="number">1</span>:Li);</span><br><span class="line">xn1 = xn(<span class="number">1</span>:Li);</span><br><span class="line"></span><br><span class="line">Y1 = fft(xn1);</span><br><span class="line">P2a = <span class="built_in">abs</span>(Y1/Li);</span><br><span class="line">P1a = P2a(<span class="number">1</span>:Li/<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">P1a(<span class="number">2</span>:<span class="keyword">end</span><span class="number">-1</span>) = <span class="number">2</span>*P1a(<span class="number">2</span>:<span class="keyword">end</span><span class="number">-1</span>);</span><br><span class="line">f1 = fs*(<span class="number">0</span>:(Li/<span class="number">2</span>))/Li;</span><br><span class="line"></span><br><span class="line"><span class="comment">%in frequency domain</span></span><br><span class="line"><span class="built_in">figure</span>(<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(f1,P1a) </span><br><span class="line">title(<span class="string">'Sample 3a Spectrum'</span>)</span><br><span class="line">xlabel(<span class="string">'f (Hz)'</span>)</span><br><span class="line">ylabel(<span class="string">'|P1(f)|'</span>)</span><br><span class="line">xlim([<span class="number">0</span> <span class="number">5000</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 147 220 294 349.7 440 835 1530</span></span><br><span class="line"><span class="comment">%Sample 3a remove noise at 835Hz, 1530Hz</span></span><br><span class="line"></span><br><span class="line">f1 = <span class="number">835</span></span><br><span class="line">f2 = <span class="number">1530</span></span><br><span class="line">fs = <span class="number">44100</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">zer = <span class="number">1</span>*<span class="built_in">exp</span>(<span class="built_in">j</span>*<span class="number">2</span>*<span class="built_in">pi</span>*[-f1/fs f1/fs -f2/fs f2/fs]'); </span><br><span class="line">pol = <span class="number">0.9</span>*<span class="built_in">exp</span>(<span class="built_in">j</span>*<span class="number">2</span>*<span class="built_in">pi</span>*[-f1/fs f1/fs -f2/fs f2/fs]');</span><br><span class="line"></span><br><span class="line">zplane(zer,pol)</span><br><span class="line">[b1,a1] = zp2tf(zer,pol,<span class="number">1</span>);</span><br><span class="line">fvtool(b1,a1)</span><br><span class="line"></span><br><span class="line"><span class="comment">%apply filter</span></span><br><span class="line">x1f = filter(b1, a1, xn)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%filtered data in frequency</span></span><br><span class="line"><span class="comment">%L1 = round(0.2/T);</span></span><br><span class="line">Li = L </span><br><span class="line">t1 = t(<span class="number">1</span>:Li);</span><br><span class="line">yn1 = x1f(<span class="number">1</span>:Li);</span><br><span class="line"></span><br><span class="line">Y1 = fft(yn1);</span><br><span class="line">P2a = <span class="built_in">abs</span>(Y1/Li);</span><br><span class="line">P1a = P2a(<span class="number">1</span>:Li/<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">P1a(<span class="number">2</span>:<span class="keyword">end</span><span class="number">-1</span>) = <span class="number">2</span>*P1a(<span class="number">2</span>:<span class="keyword">end</span><span class="number">-1</span>);</span><br><span class="line">f1 = fs*(<span class="number">0</span>:(Li/<span class="number">2</span>))/Li;</span><br><span class="line"></span><br><span class="line"><span class="comment">%filtered data in frequency domain</span></span><br><span class="line"><span class="built_in">figure</span>(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">plot</span>(f1,P1a) </span><br><span class="line">title(<span class="string">'Filtered Sample 3a Spectrum'</span>)</span><br><span class="line">xlabel(<span class="string">'f (Hz)'</span>)</span><br><span class="line">ylabel(<span class="string">'|P1(f)|'</span>)</span><br><span class="line">xlim([<span class="number">0</span> <span class="number">5000</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%playing filtered sample 3a</span></span><br><span class="line">p = audioplayer(x1f, fs);</span><br><span class="line">play(p);</span><br><span class="line">audiowrite(<span class="string">'filtered_output.wav'</span>,x1f,fs)</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+<br>
+<h3>Key Skills developed:<h3>
+<button>#Digital Filter</button>  <button>#MATLAB</button>  <button>#FFT</button></h3></h3>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Final year electrical and electronic student at the University of Bristol. </br> Contact - elimylkwan@gmail.com
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://www.linkedin.com/in/elimkwan/" class="icon style2 fa-linkedin" target="_blank" ><span class="label">LinkedIn</span></a></li>
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/elimkwan/" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                    <li><a href="./about" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>

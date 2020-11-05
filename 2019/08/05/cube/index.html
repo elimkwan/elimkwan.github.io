@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Description-->
+    
+        <meta name="description" content="This is our Rubik&#39;s Cube Solver project! The work was divided into several parts: implementing colour recognition; obtaining the solving algorithm and">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Elim Kwan">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Rubik&#39;s Cube Solving Robot">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Elim Kwan">
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content>
+    
+
+    <!-- Title -->
+    
+    <title>Rubik&#39;s Cube Solving Robot - Elim Kwan</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">Elim Kwan</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/skills">Skills</a>
+            </li>
+        
+            <li>
+                <a href="/experiences">Experiences</a>
+            </li>
+        
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>Rubik's Cube Solving Robot</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<div class="video-container"><iframe src="//www.youtube.com/embed/Fook-gANs6U" frameborder="0" allowfullscreen></iframe></div>
+<br>
+<br>
+This is our Rubik's Cube Solver project! The work was divided into several parts: implementing colour recognition; obtaining the solving algorithm and designing the GUI; interpretation of signal and lter circuits; implementation of logic and corresponding logic circuits; and design of physical elements and mechanical manipulation.
+<br>
+<img src="https://www.dropbox.com/s/n6zv8rm1eheshj2/cube-overall.png?raw=1" width="1080" height="200">
+<br>
+I was in charged of mainly the following two aspects: 
+
+
+
+<br>
+<br>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Embedded Circuits with PCB prototype </h1>
+The most interesting constraint of the project is that only analog output is allowed from the computer, yet, when translating the analog signal to PWM input for motors, no MCU/Arduino is allowed. Therefore, we had constructed our own analog-to-digital circuit with D-latches and 555 timer.
+<br>
+<br>
+<h3>Overview of the circuit</h3>
+<img src="https://www.dropbox.com/s/e2ibao4k4r9buzb/cube-circuit.png?raw=1" width="1080" height="750">
+<br>
+<br>
+
+
+<p>We had gone through many engineering cycles and design iterations to evolve our circuits. We first started off with bread board. As we gained confident in our design, we started to build stripboard prototype as well. Furthermore, with pcb development experience from previous work, I also managed to develop the pcb version of our circuit.<br><br><br><br></p>
+<h3>Hardware Prototypes</h3>
+<img src="https://www.dropbox.com/s/359e7hs1ahr9qdk/cube-strip-board.jpg?raw=1">
+ &nbsp  &nbsp  &nbsp
+<img src="https://www.dropbox.com/s/mxc3y1lkoutovbj/cube-pcb.jpg?raw=1">
+
+
+
+
+
+<br>
+<br>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Colour Recognition System </h1>
+Colour recognision is one of the main blockers of the project. The slightest change in light intensity drastically changes the RGB value. To complete the project within the specified time frame, I refactored the colour recognition code from my team mates, and we had also came up with the following solutions to alleviate the problem:
+
+<li> The interior of the box in which the cube is housed is spray painted white and dim lights are distributed evenly around within the box, the aim of this is to have a consist brightness within the box.</li>
+<li> Change the colour space from RGB to HSV</li>
+<li> Random seed averaging approach</li>
+
+<p>Random seed averaging approach means when pixels are picked from each tiles to calculated RGB average, instead of hard-coded the locations the pixels, pixels are picked randomly with in the tiles. This hugely improved the accuracy of the code. Also, with random seed approach, each run could potentially yield different results, thus, we can retry multiple times until we had successfully detected a valid scrambled cube configuarion.</p>
+<p>Full code can be found on <em><a href="https://github.com/elimkwan/Python-RubiksCubeColourRecognition" target="_blank" rel="noopener">GITHUB</a></em></p>
+<br>
+<br>
+<br>
+<h3>Key Skills developed:<h3>
+<button>#Hardware Prototype</button>  <button>#Sequential Circuit</button>
+<br>
+<br>
+<button>#Embedded Circuits</button>  <button>#Soldering</button>
+<br>
+<br>
+<button>#Image Processing</button>  <button>#Computer Vision</button>
+<br>
+<br>
+<button>#Software</button>  <button>#Python</button>  <button>#Teamwork</button></h3></h3>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Final year electrical and electronic student at the University of Bristol. </br> Contact - elimylkwan@gmail.com
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://www.linkedin.com/in/elimkwan/" class="icon style2 fa-linkedin" target="_blank" ><span class="label">LinkedIn</span></a></li>
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/elimkwan/" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                    <li><a href="./about" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
