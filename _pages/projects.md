@@ -8,13 +8,13 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/front-page.jpg
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo credit: Gemini"
 excerpt: "Some of my previous projects at work, internships and universities"
 feature_row:
   - image_path: assets/images_squared/krai.jpg
     alt: "Krai WEbsite"
     title: "Benchmarking ML Systems End-to-End"
-    excerpt: "Describe my time at Krai, and my participation in MLPerf."
+    excerpt: "Driving ML system performance at Krai through MLPerf benchmarking."
     url: /projects/krai
 
   - image_path: assets/images/polar-bear-and-me.jpg

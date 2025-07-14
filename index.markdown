@@ -7,7 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/front-page.jpg
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo credit: Gemini"
 excerpt: "Documenting life..."
 intro: 
   - excerpt: 'A ML Researcher interested in RL, Robotics and Entrepreneurship'
