@@ -1,0 +1,21 @@
+# Social media links
+# Add your social media links here
+# For more information, see: https://mmistakes.github.io/minimal-mistakes/docs/configuration/#social-links
+
+# Twitter
+twitter:
+  - title: "Twitter"
+    url: "https://twitter.com/elimkwan"
+    icon: "fab fa-twitter"
+
+# GitHub
+github:
+  - title: "GitHub"
+    url: "https://github.com/elimkwan"
+    icon: "fab fa-github"
+
+# LinkedIn
+linkedin:
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/in/elimkwan"
+    icon: "fab fa-linkedin" 

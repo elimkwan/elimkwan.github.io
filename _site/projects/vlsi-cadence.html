@@ -1,0 +1,281 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Create Circuit-level Schematics with VLSI - Elim Kwan</title>
+<meta name="description" content="Create circuit-level schematics using transistors and passives and carry out transient simulations">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Elim Kwan">
+<meta property="og:title" content="Create Circuit-level Schematics with VLSI">
+<meta property="og:url" content="http://0.0.0.0:4000/projects/vlsi-cadence">
+
+
+  <meta property="og:description" content="Create circuit-level schematics using transistors and passives and carry out transient simulations">
+
+
+
+  <meta property="og:image" content="http://0.0.0.0:4000/assets/images_squared/vlsi.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2016-03-23T10:48:41-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/projects/vlsi-cadence">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Elim Kwan Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Elim Kwan
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/photography/"
+                
+                
+              >Photography</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images_squared/vlsi.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Create Circuit-level Schematics with VLSI
+
+        
+      </h1>
+      
+        <p class="page__lead">Create circuit-level schematics using transistors and passives and carry out transient simulations
+</p>
+      
+      
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Create Circuit-level Schematics with VLSI">
+    <meta itemprop="description" content="Create circuit-level schematics using transistors and passives and carry out transient simulations">
+    <meta itemprop="datePublished" content="2016-03-23T10:48:41-05:00">
+    
+
+    <section class="page__content" itemprop="text">
+      <!-- Content -->
+<p>
+In the Very-Large-Scale Integration unit, I have had the chance to use the Cadence design environment and the Virtuoso tool set for full-custom IC design based on the Cadence tool set and the 0.35 um CMOS process from AMS. 
+</p>
+
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Circuit Design using Schematic Entry </h1>
+<li>
+Create circuit-level schematics using transistors and passives and carry out transient simulations
+</li>
+<li>
+Observing the difference between simulated and calculated values for high-to-low and low-to-high transcient delay, which can be accounted for as the calculation did not consider the internal node capacitance.
+</li>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Layout </h1>
+<li>
+Construct the layout for a inverter cell(as shown in the fig) and  a two-input NOR(NOR2) gate.
+</li>
+<li>
+Use of Cadence Layout XL tool.
+</li>
+<li>
+Minimize NOR2 layout with diffusion sharing techniques. (e.g. Share diffusion regions for PMOS FETs and Share diffusion regions for NMOS FETs)
+</li>
+<p><br />
+<img src="https://www.dropbox.com/s/xazm93c32fog7jq/vlsi-invlayout.png?raw=1" width="240" height="375" />
+<img src="https://www.dropbox.com/s/d0gc270i7umlc35/vlsi-layout.png?raw=1" width="540" height="375" /></p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Advanced Simulation and Verification Techniques </h1>
+<li>
+Build a parameterised cell and simulate it
+</li>
+<li>
+Run parametric analyses and sweeps
+</li>
+<li>
+Quantify effect of parametric variations through corner analyses and Monte Carlo simulations(as shown in the figure)
+</li>
+<p><br />
+<img src="https://www.dropbox.com/s/pnk7ru8jo3bfpvl/vlsi-MonteCarlo.png?raw=1" width="600" height="350" /></p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+<h1 style="color:#7ecaf6;" class="fas fa-briefcase"> Tasks in Chip Assembly </h1>
+<li>Design of input and output pads, guard rings, and input/output circuits</li>
+
+<p><br />
+<br />
+<br /></p>
+<h3>Key Skills developed:<h3>
+<button>#Cadence Virtuoso</button>  <button>#ARMS</button> <button>#IC Design</button>  
+<br />
+<br />
+<button>#Design and Verification</button> <button>#Chips Layout</button> <button>#VLSI</button> 
+<br />
+<br />
+<button>#Hardware</button> <button>Digital Electronics</button></h3></h3>
+
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://0.0.0.0:4000">Elim Kwan</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
