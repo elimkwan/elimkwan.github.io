@@ -18,7 +18,7 @@ intro:
 Currently, building more resilience and robust multi-UAV systems in dynamic, uncertain environments at the Alan Turing Institute.
 
 # Publications
-- On‑board Mission Replanning for Adaptive Cooperative Multi‑Robot Systems ([preprint](https://arxiv.org/abs/2506.06094))
+- On‑board Mission Replanning for Adaptive Cooperative Multi‑Robot Systems ([paper](https://arxiv.org/abs/2506.06094))
   - <span style="font-size:0.8em; color:#666;"> First Author. Accepted at IEEE Robotics and Automation Letters. </span>
 - Entropy‑Driven Adaptive Filtering for High‑Accuracy and Resource‑Efficient FPGA‑Based Neural Network Systems ([paper](https://www.mdpi.com/2079-9292/9/11/1765))
   - <span style="font-size:0.8em; color:#666;"> First Author. Published at MDPI Advanced AI Hardware Designs.</span>
