@@ -12,6 +12,12 @@ header:
 excerpt: "Why and How"
 ---
 
+
+<figure style="text-align: center;">
+  <img src="{{ site.baseurl }}/assets/images/hipeac-present.jpg" alt="HiPEAC presentation" width="500">
+  <figcaption><em>Pic:</em> Presenting at HiPEAC Summer School 2023</figcaption>
+</figure>
+
 My time at Krai was incredibly rewarding. Here’s a breakdown of what I worked on and learned:
 
 # Why benchmarking matters
