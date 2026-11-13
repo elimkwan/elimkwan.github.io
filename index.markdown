@@ -15,7 +15,7 @@ intro:
 
 {% include feature_row id="intro" type="center" %}
 
-Currently, building more resilience and robust multi-UAV systems in dynamic, uncertain environments at the Alan Turing Institute.
+Currently a PhD student at the Autonomous Manufacturing Lab, part of the UCL Robotics Institute, researching robotics for construction. Previously, I worked at the Alan Turing Institute on developing more resilient and robust multi-UAV systems for dynamic and uncertain environments.
 
 # Publications
 - On‑board Mission Replanning for Adaptive Cooperative Multi‑Robot Systems ([paper](https://arxiv.org/abs/2506.06094))
