@@ -45,7 +45,6 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/photography/</loc>
-<lastmod>2022-05-27T10:59:26-05:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/projects/</loc>
@@ -61,5 +60,8 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/projects/vlsi-cadence</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/assets/photography-gallery/</loc>
 </url>
 </urlset>

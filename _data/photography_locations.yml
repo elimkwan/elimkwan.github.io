@@ -1,0 +1,18 @@
+# Map each photo's full site-relative path to the place where it was taken.
+# Fill in the quoted values, e.g. "City, Country". Blank or missing entries
+# hide the location line. Add entries for new photos only when needed.
+"/assets/photography/wildlife/IMG_4590-copy.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/wildlife/IMG_4590.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/wildlife/IMG_4674.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/wildlife/IMG_4679 copy.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/wildlife/IMG_4679.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4475.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4480.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4489.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4526.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4539.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4553.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4598.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4629.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4684.jpg": "Bristol Balloon Fiesta"
+"/assets/photography/scenic/IMG_4684_combined.jpg": "Bristol Balloon Fiesta"

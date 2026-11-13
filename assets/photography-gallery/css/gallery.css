@@ -1,0 +1,97 @@
+/* Local adaptations of Multiverse / rampatra photography. See ../licenses/. */
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+body, input, select, textarea, button { font-family: "Source Sans 3", sans-serif; }
+html { scrollbar-gutter: stable; }
+body { margin: 0; }
+body.photo-open { overflow: hidden; }
+#wrapper { padding-bottom: 4em; }
+#main .thumb > .image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#main .thumb > .image:hover img { filter: brightness(1.08); }
+a:focus-visible, button:focus-visible { outline: 3px solid #34a58e; outline-offset: 4px; }
+#main .thumb > .image:focus-visible { outline-offset: -6px; }
+#main .thumb:after { pointer-events: none; }
+#header a { min-height: 44px; }
+#header h1 { max-width: 65%; }
+.gallery-credits { padding: 1.5em; color: #b5b5b5; }
+.gallery-credits p { margin: 0 0 0.5em; }
+.gallery-credits small { font-size: 0.8em; }
+.empty-gallery { padding: 3em 1.5em; }
+.skip-link { position: fixed; top: -10em; left: 1em; z-index: 30000; padding: 0.75em; background: #1f2224; }
+.skip-link:focus { top: 1em; }
+.photo-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 3.5rem 4rem 1rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+.photo-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.photo-dialog:not([open]) { display: none; }
+.photo-dialog[open] { display: flex; align-items: center; justify-content: center; }
+.photo-dialog figure { display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; margin: 0; }
+.photo-full { display: block; flex: 1; min-height: 0; width: 100%; object-fit: contain; }
+.photo-dialog figcaption {
+  flex: none;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  background: rgba(20, 22, 24, 0.75);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.photo-dialog figcaption p { margin: 0.25rem 0; font-size: 0.9rem; line-height: 1.5; }
+.photo-exif { color: #ddd; }
+.photo-dialog button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: #303437;
+  color: #fff !important;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.photo-dialog button:hover { background: #454b4f; }
+.photo-close { top: 0.5rem; right: 0.5rem; }
+.photo-previous { top: calc(50% - 24px); left: 0.5rem; }
+.photo-next { top: calc(50% - 24px); right: 0.5rem; }
+.photo-dialog button[hidden], [hidden] { display: none !important; }
+@media screen and (max-width: 736px) {
+  #header { top: auto; bottom: 0; height: 4em; line-height: 4em; padding: 0 1em; }
+  #header h1 { font-size: 0.8em; }
+  #header h1 span { display: none; }
+  #header nav ul li a { padding: 0 0.5em; }
+  #wrapper { padding-top: 0; padding-bottom: 4em; }
+  .photo-dialog { padding: 4rem 0.5rem 4.5rem; }
+  .photo-previous, .photo-next { top: auto; bottom: 0.5rem; }
+  .photo-previous { left: calc(50% - 60px); }
+  .photo-next { right: calc(50% - 60px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
